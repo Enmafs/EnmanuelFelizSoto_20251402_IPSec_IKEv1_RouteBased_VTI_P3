@@ -1,8 +1,8 @@
-# 🔐 Lab 02 — IPSec IKEv1 — Route-Based (VTI)
+# 🔐 Lab 03 — IPSec IKEv2 — Route-Based (VTI)
 
 **Estudiante:** Enmanuel Feliz Soto | **Matrícula:** 2025-1402  
 **Institución:** Instituto Tecnológico de Las Américas (ITLA)  
-**Curso:** Seguridad en Redes | **Sección:** 2-1C  
+**Curso:** Seguridad en Redes | **Sección:** 5  
 **Docente:** Jonathan Esteban Rondón Corniel
 
 ---
@@ -14,7 +14,7 @@ VPN basada en rutas usando VTI. Más flexible que Policy-Based, permite routing 
 | Campo | Valor |
 |-------|-------|
 | **Tipo de VPN** | Site-to-Site |
-| **Protocolo** | IKEv1 + IPSec ESP-AES256-SHA256 |
+| **Protocolo** | IKEv2 + IPSec ESP-AES256-SHA256 |
 | **Mecanismo** | Static VTI (Virtual Tunnel Interface) + Rutas Estáticas |
 | **Routing** | Rutas estáticas apuntando a Tunnel0 |
 | **Pre-shared Key** | `Cisco2025-1402-VTI!` |
@@ -59,7 +59,7 @@ VPN basada en rutas usando VTI. Más flexible que Policy-Based, permite routing 
 ## ⚙️ Configuración
 
 El script completo de configuración se encuentra en:  
-📄 [`Lab02_IPSec_IKEv1_RouteBased_VTI.txt`](./Lab02_IPSec_IKEv1_RouteBased_VTI.txt)
+📄 [`Lab02_IPSec_IKEv2_RouteBased_VTI.txt`](./Lab03_IPSec_IKEv2_RouteBased_VTI.txt)
 
 ### Parámetros IKE/IPSec
 
@@ -133,8 +133,8 @@ ping 14.2.10.2 source 14.2.10.1
 | Recurso | Enlace |
 |---------|--------|
 | Repositorio Principal | [Enmafs/NetSec](https://github.com/Enmafs/NetSec) |
-| Script de configuración | [`Lab02_IPSec_IKEv1_RouteBased_VTI.txt`](./Lab02_IPSec_IKEv1_RouteBased_VTI.txt) |
-| Video demostración | 🎬 https://youtu.be/JZMyIaCoNk0 |
+| Script de configuración | [`Lab03_IPSec_IKEv2_RouteBased_VTI.txt`](./Lab03_IPSec_IKEv2_RouteBased_VTI.txt) |
+| Video demostración | 🎬 **Pendiente** |
 
 ---
 
