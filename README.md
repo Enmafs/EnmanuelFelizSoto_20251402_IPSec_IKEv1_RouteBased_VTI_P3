@@ -59,7 +59,7 @@ VPN basada en rutas usando VTI. Más flexible que Policy-Based, permite routing 
 ## ⚙️ Configuración
 
 El script completo de configuración se encuentra en:  
-📄 [`Lab03_IPSec_IKEv2_RouteBased_VTI.txt`](./Lab03_IPSec_IKEv2_RouteBased_VTI.txt)
+📄 [`EnmanuelFelizSoto_2025-1402_IPSec_IKEv1_RouteBased_VTI_P3.txt`](./EnmanuelFelizSoto_2025-1402_IPSec_IKEv1_RouteBased_VTI_P3.txt)
 
 ### Parámetros IKE/IPSec
 
@@ -133,7 +133,7 @@ ping 14.2.10.2 source 14.2.10.1
 | Recurso | Enlace |
 |---------|--------|
 | Repositorio Principal | [Enmafs/NetSec](https://github.com/Enmafs/NetSec) |
-| Script de configuración | [`Lab03_IPSec_IKEv2_RouteBased_VTI.txt`](./Lab03_IPSec_IKEv2_RouteBased_VTI.txt) |
+| Script de configuración | [`EnmanuelFelizSoto_2025-1402_IPSec_IKEv1_RouteBased_VTI_P3.txt`](./EnmanuelFelizSoto_2025-1402_IPSec_IKEv1_RouteBased_VTI_P3.txt) |
 | Video demostración | 🎬 **Pendiente** |
 
 ---
