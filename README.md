@@ -32,23 +32,27 @@ VPN basada en rutas usando VTI. Más flexible que Policy-Based, permite routing 
 
 ### Tabla de Direccionamiento
 
-| Router | Rol | IP WAN | Interfaz WAN | IP LAN | Interfaz LAN |
-|--------|-----|--------|--------------|--------|--------------|
-| R1-S1 | Peer 1 / Iniciador | 20.25.2.2 | Ethernet0/0 | 10.14.11.0.1/24 | **Ethernet0/3** |
-| R4-S2 | Peer 2 / Respondedor | 20.25.2.6 | Ethernet0/1 | 10.14.21.0.1/24 | Ethernet0/0 |
+| **Router** | **Rol** | **IP WAN** | **Interfaz WAN** | **IP LAN** | **Interfaz LAN** | **IP VPN** | **Interfaz VPN** |
+|------------|---------|------------|------------------|------------|------------------|------------|------------------|
+| R2    | Peer 1   / Iniciador | 20.25.2.6 | Ethernet0/0 | 30.30.30.1/24 | Ethernet0/1 | 14.2.10.1 | Tunnel0 |
+| R5    | Peer 2 / Respondedor | 20.25.1.10| Ethernet0/0 | -- | Ethernet0/1 | 14.2.10.2 | Tunnel0 |
+| R5    | -- | -- | -- | 10.10.10.1/24 | Ethernet0/1.10 | -- | -- |
+| R5    | -- | -- | -- | 20.20.20.1/24 | Ethernet0/1.20 | -- | -- |
+
 
 ### ISP
 
 | Interfaz ISP | IP | Descripción |
 |-------------|-----|-------------|
-| Ethernet0/0 | 20.25.2.1/30 | Link to R1-S1 |
-| Ethernet0/1 | 20.25.2.5/30 | Link to R4-S2 |
+| Ethernet0/0 | 20.25.1.1/30 | Link to R1-S1 |
+| Ethernet0/1 | 20.25.1.5/30 | Link to R4-S2 |
+| Ethernet0/2 | 20.25.1.9/30 | Link to R5    |
 
 ### Dirección Túnel
 | Endpoint | IP Tunnel |
 |----------|-----------|
-| R1-S1 Tunnel0 | 14.0.2.1/30/30 |
-| R4-S2 Tunnel0 | 14.0.2.2/30/30 |
+| R1-S1 Tunnel0 | 14.2.10.1/30 |
+| R4-S2 Tunnel0 | 14.2.10.2/30 |
 
 ---
 
@@ -76,7 +80,7 @@ El script completo de configuración se encuentra en:
 ### 1. Cargar configuración en PNetLab
 ```
 # Aplicar configuración en cada dispositivo en el orden:
-# 1. ISP → 2. R1-S1 → 3. R4-S2 → 4. R2/Server
+# 1. ISP → 2. R1-S1 → 3. R2 → 4. R5
 ```
 
 ### 2. Verificar la VPN
@@ -93,7 +97,7 @@ show interface Tunnel0
 
 ### 3. Prueba de conectividad
 ```
-ping 10.14.21.10 source 10.14.11.2
+ping 14.2.10.2 source 14.2.10.1
 ```
 
 ---
@@ -130,7 +134,7 @@ ping 10.14.21.10 source 10.14.11.2
 |---------|--------|
 | Repositorio Principal | [Enmafs/NetSec](https://github.com/Enmafs/NetSec) |
 | Script de configuración | [`Lab02_IPSec_IKEv1_RouteBased_VTI.txt`](./Lab02_IPSec_IKEv1_RouteBased_VTI.txt) |
-| Video demostración | 🎬 **[PENDIENTE — agregar link de YouTube]** |
+| Video demostración | 🎬 https://youtu.be/JZMyIaCoNk0 |
 
 ---
 
