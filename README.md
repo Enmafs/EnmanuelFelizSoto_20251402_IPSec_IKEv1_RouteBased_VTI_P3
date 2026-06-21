@@ -134,7 +134,7 @@ ping 14.2.10.2 source 14.2.10.1
 |---------|--------|
 | Repositorio Principal | [Enmafs/NetSec](https://github.com/Enmafs/NetSec) |
 | Script de configuración | [`EnmanuelFelizSoto_2025-1402_IPSec_IKEv1_RouteBased_VTI_P3.txt`](./EnmanuelFelizSoto_2025-1402_IPSec_IKEv1_RouteBased_VTI_P3.txt) |
-| Video demostración | 🎬 **Pendiente** |
+| Video demostración | 🎬 [Aquí](https://youtu.be/JZMyIaCoNk0) |
 
 ---
 
